@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.offer{
+    background-color: #848383;
+    text-align: center;
+    padding: 12px 0;
+}
+.offer p{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* ---------------header------------------- */
+
+header{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.ham{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    display: none;
+}
+.ham i{
+    font-size: 25px;
+    color: #939393;
+}
+.logo{
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+}
+.acc-nav{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+}
+.acc-nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+}
+.acc-nav ul li a{
+    text-decoration: none;
+    color: #939393;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+}
+.acc-nav ul li a:hover{
+    color: #5C5C5C;
+}
+.acc-nav-icon{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    display: none;
+}
+.acc-nav-icon i{
+    color: #939393;
+    margin-right: 30px;
+    font-size: 20px;
+
+}
+.cut{
+    display: none;
+    text-align: left;
+}
+.cut i{
+    font-size: 20px;
+    color: #939393;
+}
+nav{
+    text-align: center;
+    padding-bottom: 20px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #5C5C5C;
+    letter-spacing: 2px;
+    position: relative;
+}
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #5C5C5C;
+    bottom: -20px;
+    left: 0;
+    transition: width 0.5s;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+
+/* ----------------hero--------------------- */
+
+.hero-banner{
+    background: url(../Images/Banner1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.hero-banner img{
+    width: 100%;
+    height: 100%;
+}
+.down-arr{
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.down-arr i{
+    padding: 18px;
+    background-color: #fff;
+    color: #5C5C5C;
+    border-radius: 100%;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------main----------------------- */
+
+main{
+    background-color: #F4F1F2;
+    padding-bottom: 30px;
+}
+#feature{
+    padding-top: 100px;
+}
+.fea-head{
+    text-align: center;
+}
+.fea-head .fp1{
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #5C5C5C;
+    margin-top: 10px;
+}
+.fea-head .fp2{
+    font-size: 27px;
+    letter-spacing: 4px;
+    color: #70716F;
+    margin-top: 20px;
+    margin-bottom: 75px;
+}
+/* .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 55px;
+} */
+.row1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 50px;
+    margin-bottom: 50px;
+}
+.row2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    margin-bottom: 50px;
+}
+.col{
+    position: relative;
+    /* flex-basis: 31.2%; */
+}
+.col img{
+    width: 100%;
+}
+.col-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.col:hover .col-in{
+    opacity: 1;
+}
+.vlp-btn{
+    margin: 90px auto;
+    text-align: center;
+}
+.vlp-btn a{
+    width: 220px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #5C5C5C;
+    background-color: #5c5c5c;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.vlp-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #F4F1F2;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.vlp-btn a:hover span{
+    width: 100%;
+}
+.vlp-btn a:hover{
+    color: #5C5C5C;
+}
+
+/* -------------------product-cate------------------- */
+
+.cate{
+    /* flex-basis: 32%; */
+    height: 600px;
+    overflow: hidden;
+}
+.cate-img{
+    background-image: url(../Images/b1.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img1{
+    background-image: url(../Images/b2.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img2{
+    background-image: url(../Images/b3.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img3{
+    background-image: url(../Images/b4.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img4{
+    background-image: url(../Images/b5.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img5{
+    background-image: url(../Images/b6.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img6{
+    background-image: url(../Images/b7.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-img7{
+    background-image: url(../Images/b8.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cate-olay{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    height: 100%;
+    position: relative;
+}
+.cate-info{
+    position: absolute;
+    color: #fff;
+    letter-spacing: 3px;
+    left: 50px;
+    bottom: 50px;
+}
+.s-para{
+    font-size: 14px;
+}
+.para{
+    font-size: 25px;
+    margin-top: 18px;
+    margin-bottom: 40px;
+}
+.cate-info a{
+    text-decoration: none;
+    border: 0.5px solid #fff;
+    color: #5c5c5c;
+    font-size: 13px;
+    background-color: #fff;
+    padding: 13px 25px;
+    transition: all 0.5s;
+}
+.cate-info a:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+/* ----------------footer---------------------- */
+
+.footer{
+    background-color: #E6DFC1;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+footer{
+    /* display: flex;
+    align-items: top;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+}
+.foot h4{
+    color: #5C5C5C;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+.foot p, .social i, .foot ul li a, .form #email{
+    color: #939393;
+    font-size: 15px;
+}
+.foot{
+    padding: 0 40px;
+}
+.foot-list ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.foot-list ul li a{
+    text-decoration: none;
+}
+.social{
+    margin-top: 25px;
+}
+.social a{
+    margin-right: 30px;
+}
+.form input[type=email]{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #E6DFC1;
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 20px 0;
+}
+.form::placeholder{
+    color: #AE9893;
+    font-size: 15px;
+}
+.form input[type=email]:focus{
+    border: 1px solid #B69D99
+}
+.form .subs{
+    margin-top: 30px;
+}
+.form .subs a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding: 12px 30px;
+    border: 0.5px solid #B69D99;
+    background-color: #5c5c5c;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.form .subs a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #E6DFC1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.form .subs a:hover span{
+    width: 100%;
+}
+.form .subs a:hover{
+    color: #5c5c5c;
+}
