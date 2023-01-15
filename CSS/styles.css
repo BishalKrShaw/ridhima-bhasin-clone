@@ -432,3 +432,17 @@ footer{
 .form .subs a:hover{
     color: #5c5c5c;
 }
+.credit{
+    margin-top: 100px;
+    text-align: center;
+    line-height: 25px;
+}
+.credit .name{
+    color: #5c5c5c;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.credit .developer{
+    color: #939393;
+    font-size: 15px;
+}
